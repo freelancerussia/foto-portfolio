@@ -1,166 +1,89 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-   <style>
-      * {
-         margin: 0;
-         padding: 0;
-         box-sizing: border-box;
-      }
-
-      .container {
-         max-width: 1200px;
-         margin: 0 auto;
-      }
-
-      .header {
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         padding: 20px;
-      }
-
-      .logo {
-         font-size: 32px;
-         font-weight: bold;
-         color: #333;
-      }
-
-      .nav {
-         display: flex;
-         gap: 20px;
-      }
-
-      .nav a {
-         text-decoration: none;
-         color: #333;
-         font-size: 18px;
-      }
-
-      .nav a:hover {
-         color: #f00;
-      }
-
-      .hero {
-         height: 80vh;
-         background-image: url("hero.jpg");
-         background-size: cover;
-         background-position: center;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-      }
-
-      .hero h1 {
-         font-size: 64px;
-         color: #fff;
-         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
-
-      .services {
-         padding: 40px;
-         display: grid;
-         grid-template-columns: repeat(3, 1fr);
-         gap: 20px;
-      }
-
-      .service {
-         background-color: #f0f0f0;
-         border-radius: 10px;
-         padding: 20px;
-         text-align: center;
-      }
-
-      .service img {
-         width: 100px;
-         height: 100px;
-         margin-bottom: 10px;
-      }
-
-      .service h3 {
-         font-size: 24px;
-         color: #333;
-         margin-bottom: 10px;
-      }
-
-      .service p {
-         font-size: 16px;
-         color: #666;
-      }
-
-      .portfolio {
-         padding: 40px;
-         display: grid;
-         grid-template-columns: repeat(4, 1fr);
-         gap: 20px;
-      }
-
-      .portfolio img {
-         width: 100%;
-         height: 300px;
-         object-fit: cover;
-         border-radius: 10px;
-      }
-
-      .footer {
-         background-color: #333;
-         padding: 20px;
-         color: #fff;
-         text-align: center;
-      }
-
-      .footer p {
-         font-size: 16px;
-      }
-   </style>
+   <title>Курс по визуалу</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-   <div class="container">
-      <div class="header">
-         <div class="logo">Фотограф</div>
-         <div class="nav">
-            <a href="#">Главная</a>
-            <a href="#">Услуги</a>
-            <a href="#">Портфолио</a>
-            <a href="#">Контакты</a>
+   <header>
+      <nav>
+         <ul>
+            <li><a href="#about">О курсе</a></li>
+            <li><a href="#authors">Об авторах</a></li>
+            <li><a href="#who">Для кого</a></li>
+            <li><a href="#program">Программа</a></li>
+         </ul>
+         <a href="#" class="cta">Участвую</a>
+         <p class="date">Дата проведения курса: 01.02.2024</p>
+      </nav>
+   </header>
+
+   <main>
+      <section id="about">
+         <h1>О курсе</h1>
+         <p>Курс по визуалу - это уникальная возможность научиться создавать красивые и эффективные дизайны. Мы
+            предлагаем краткую информацию о курсе, а также фотографии, чтобы вы могли увидеть, какие проекты мы создаем.
+         </p>
+      </section>
+
+      <section id="authors">
+         <h1>Об авторах</h1>
+         <div class="slider">
+            <div class="slide">
+               <img src="author1.jpg" alt="Автор 1">
+               <h2>Автор 1</h2>
+               <p>Красивое описание автора 1 и его профессиональные скилы.</p>
+            </div>
+            <div class="slide">
+               <img src="author2.jpg" alt="Автор 2">
+               <h2>Автор 2</h2>
+               <p>Красивое описание автора 2 и его профессиональные скилы.</p>
+            </div>
+            <div class="slide">
+               <img src="author3.jpg" alt="Автор 3">
+               <h2>Автор 3</h2>
+               <p>Красивое описание автора 3 и его профессиональные скилы.</p>
+            </div>
          </div>
-      </div>
-      <div class="hero">
-         <h1>Создайте свою историю с помощью профессионального фотографа</h1>
-      </div>
-      <div class="services">
-         <div class="service">
-            <img src="wedding.jpg" alt="Wedding">
-            <h3>Свадебная фотография</h3>
-            <p>Запечатлите самые счастливые моменты вашей жизни с помощью креативного и опытного фотографа.</p>
+      </section>
+
+      <section id="who">
+         <h1>Для кого</h1>
+         <ul>
+            <li>Профессия 1</li>
+            <li>Профессия 2</li>
+            <li>Профессия 3</li>
+         </ul>
+      </section>
+
+      <section id="program">
+         <h1>Программа</h1>
+         <p>Описание программы обучения по визуалу.</p>
+         <div class="prices">
+            <div class="price">
+               <h2>Mini</h2>
+               <p>Описание тарифа Mini.</p>
+               <a href="#" class="buy">Купить</a>
+            </div>
+            <div class="price">
+               <h2>Base</h2>
+               <p>Описание тарифа Base.</p>
+               <a href="#" class="buy">Купить</a>
+            </div>
+            <div class="price">
+               <h2>Maxi</h2>
+               <p>Описание тарифа Maxi.</p>
+               <a href="#" class="buy">Купить</a>
+            </div>
          </div>
-         <div class="service">
-            <img src="portrait.jpg" alt="Portrait">
-            <h3>Портретная фотография</h3>
-            <p>Покажите свою индивидуальность и стиль с помощью профессионального портрета, сделанного по вашим
-               пожеланиям.</p>
-         </div>
-         <div class="service">
-            <img src="nature.jpg" alt="Nature">
-            <h3>Природная фотография</h3>
-            <p>Исследуйте красоту и разнообразие природы с помощью увлекательной и захватывающей фотографии.</p>
-         </div>
-      </div>
-      <div class="portfolio">
-         <img src="p1.jpg" alt="Portfolio 1">
-         <img src="p2.jpg" alt="Portfolio 2">
-         <img src="p3.jpg" alt="Portfolio 3">
-         <img src="p4.jpg" alt="Portfolio 4">
-         <img src="p5.jpg" alt="Portfolio 5">
-         <img src="p6.jpg" alt="Portfolio 6">
-         <img src="p7.jpg" alt="Portfolio 7">
-         <img src="p8.jpg" alt="Portfolio 8">
-      </div>
-      <div class="footer">
-         <p>© 2024 Фотограф. Все права защищены.</p>
-      </div>
-   </div>
+      </section>
+   </main>
+
+   <script src="script.js"></script>
 </body>
 
 </html>
