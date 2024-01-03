@@ -1,89 +1,146 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-   <title>Курс по визуалу</title>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="styles.css">
+   <style>
+      /* Стили для лендинг-блога */
+      body {
+         margin: 0;
+         font-family: Arial, sans-serif;
+      }
+
+      .section {
+         height: 100vh;
+         /* Высота каждой секции равна высоте экрана */
+         width: 100vw;
+         /* Ширина каждой секции равна ширине экрана */
+         overflow-x: hidden;
+         /* Скрываем горизонтальный скролл */
+      }
+
+      .header {
+         position: fixed;
+         /* Фиксируем заголовок сверху */
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 60px;
+         background-color: #333;
+         color: white;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0 20px;
+      }
+
+      .header a {
+         color: white;
+         text-decoration: none;
+         font-weight: bold;
+      }
+
+      .header a:hover {
+         color: #ccc;
+      }
+
+      .logo {
+         font-size: 24px;
+      }
+
+      .nav {
+         display: flex;
+         gap: 20px;
+      }
+
+      .content {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         padding: 80px 20px;
+      }
+
+      .title {
+         font-size: 36px;
+         font-weight: bold;
+         text-align: center;
+         margin-bottom: 20px;
+      }
+
+      .text {
+         font-size: 18px;
+         line-height: 1.5;
+         text-align: justify;
+         max-width: 800px;
+      }
+
+      .image {
+         width: 600px;
+         height: 400px;
+         object-fit: cover;
+         margin: 20px auto;
+      }
+
+      /* Стили для кастомного вертикального скролла */
+      ::-webkit-scrollbar {
+         width: 10px;
+         /* Ширина скролла */
+      }
+
+      ::-webkit-scrollbar-track {
+         background: #f1f1f1;
+         /* Цвет фона скролла */
+      }
+
+      ::-webkit-scrollbar-thumb {
+         background: #888;
+         /* Цвет ползунка скролла */
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+         background: #555;
+         /* Цвет ползунка скролла при наведении */
+      }
+   </style>
 </head>
 
 <body>
-   <header>
-      <nav>
-         <ul>
-            <li><a href="#about">О курсе</a></li>
-            <li><a href="#authors">Об авторах</a></li>
-            <li><a href="#who">Для кого</a></li>
-            <li><a href="#program">Программа</a></li>
-         </ul>
-         <a href="#" class="cta">Участвую</a>
-         <p class="date">Дата проведения курса: 01.02.2024</p>
-      </nav>
-   </header>
-
-   <main>
-      <section id="about">
-         <h1>О курсе</h1>
-         <p>Курс по визуалу - это уникальная возможность научиться создавать красивые и эффективные дизайны. Мы
-            предлагаем краткую информацию о курсе, а также фотографии, чтобы вы могли увидеть, какие проекты мы создаем.
-         </p>
-      </section>
-
-      <section id="authors">
-         <h1>Об авторах</h1>
-         <div class="slider">
-            <div class="slide">
-               <img src="author1.jpg" alt="Автор 1">
-               <h2>Автор 1</h2>
-               <p>Красивое описание автора 1 и его профессиональные скилы.</p>
-            </div>
-            <div class="slide">
-               <img src="author2.jpg" alt="Автор 2">
-               <h2>Автор 2</h2>
-               <p>Красивое описание автора 2 и его профессиональные скилы.</p>
-            </div>
-            <div class="slide">
-               <img src="author3.jpg" alt="Автор 3">
-               <h2>Автор 3</h2>
-               <p>Красивое описание автора 3 и его профессиональные скилы.</p>
-            </div>
-         </div>
-      </section>
-
-      <section id="who">
-         <h1>Для кого</h1>
-         <ul>
-            <li>Профессия 1</li>
-            <li>Профессия 2</li>
-            <li>Профессия 3</li>
-         </ul>
-      </section>
-
-      <section id="program">
-         <h1>Программа</h1>
-         <p>Описание программы обучения по визуалу.</p>
-         <div class="prices">
-            <div class="price">
-               <h2>Mini</h2>
-               <p>Описание тарифа Mini.</p>
-               <a href="#" class="buy">Купить</a>
-            </div>
-            <div class="price">
-               <h2>Base</h2>
-               <p>Описание тарифа Base.</p>
-               <a href="#" class="buy">Купить</a>
-            </div>
-            <div class="price">
-               <h2>Maxi</h2>
-               <p>Описание тарифа Maxi.</p>
-               <a href="#" class="buy">Купить</a>
-            </div>
-         </div>
-      </section>
-   </main>
-
-   <script src="index.js"></script>
+   <div class="header">
+      <div class="logo">Интересные факты</div>
+      <div class="nav">
+         <a href="#section1">Главная</a>
+         <a href="#section2">Факт 1</a>
+         <a href="#section3">Факт 2</a>
+         <a href="#section4">Факт 3</a>
+         <a href="#section5">Факт 4</a>
+      </div>
+   </div>
+   <div class="section" id="section1" style="background-color: #eee;">
+      <div class="content">
+         <div class="title">Добро пожаловать на лендинг-блог о интересных фактах!</div>
+         <div class="text">Здесь вы найдете много удивительных и познавательных фактов о разных вещах. Например, вы
+            знали, что самое длинное слово в русском языке состоит из 35 букв и обозначает один из видов легочных
+            заболеваний? Или что самый большой аллигатор может достигать длины до 6 метров? Эти и многие другие факты вы
+            узнаете, если подпишетесь на наш лендинг-блог. Просто введите свой адрес электронной почты в форму ниже и
+            получите доступ к нашему бесплатному электронному книге с еще большим количеством интересных фактов!</div>
+         <form>
+            <input type="email" name="email" placeholder="Введите ваш email" required>
+            <input type="submit" value="Получить бесплатную электронную книгу">
+         </form>
+      </div>
+   </div>
+   <div class="section" id="section2" style="background-color: #fff;">
+      <div class="content">
+         <div class="title">Факт 1: Самое длинное слово в русском языке</div>
+         <div class="text">Вы готовы услышать самое длинное слово в русском языке? Приготовьтесь, потому что оно состоит
+            из целых 35 букв! Готовы? Вот оно: пневмонултрамикроскопическийсиликоз. Да, вы не ослышались, это слово
+            действительно существует в русском языке и означает заболевание легких, вызванное вдыханием мельчайших
+            частиц кремнезема.Это слово появилось в 1930-х годах и является заимствованием из английского языка, где оно
+            также считается самым длинным
+            словом. Как вы думаете, сможете произнести это слово без запинки?</div>
+         <div class="image"></div>
+      </div>
+   </div>
+   <!-- Добавьте еще три секции с другими интересными фактами -->
 </body>
 
 </html>
